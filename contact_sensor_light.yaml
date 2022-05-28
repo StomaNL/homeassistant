@@ -1,15 +1,15 @@
 blueprint:
-  name: Motion-activated Light
-  description: Turn on a light when motion is detected.
+  name: Door/Window sensor-activated Light
+  description: Turn on a light when door/window is opened.
   domain: automation
-  source_url: https://github.com/home-assistant/core/blob/dev/homeassistant/components/automation/blueprints/motion_light.yaml
+  source_url: https://github.com/StomaNL/homeassistant/edit/main/motion_light.yaml
   input:
-    motion_entity:
-      name: Motion Sensor
+    contact_sensor_entity:
+      name: Contact Sensor
       selector:
         entity:
           domain: binary_sensor
-          device_class: motion
+          device_class: contact
     light_target:
       name: Light
       selector:
